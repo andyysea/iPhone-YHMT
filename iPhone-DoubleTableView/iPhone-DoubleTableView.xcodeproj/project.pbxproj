@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7EF218711E7591D100B32BB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218701E7591D100B32BB6 /* main.m */; };
+		7EF218741E7591D100B32BB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218731E7591D100B32BB6 /* AppDelegate.m */; };
+		7EF2187C1E7591D100B32BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EF2187B1E7591D100B32BB6 /* Assets.xcassets */; };
+		7EF2187F1E7591D100B32BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF2187D1E7591D100B32BB6 /* LaunchScreen.storyboard */; };
+		7EF2188A1E7591D100B32BB6 /* iPhone_DoubleTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218891E7591D100B32BB6 /* iPhone_DoubleTableViewTests.m */; };
+		7EF218A41E75932A00B32BB6 /* YHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF2189F1E75932A00B32BB6 /* YHBaseViewController.m */; };
+		7EF218A51E75932A00B32BB6 /* YHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218A11E75932A00B32BB6 /* YHNavigationController.m */; };
+		7EF218A61E75932A00B32BB6 /* YHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218A31E75932A00B32BB6 /* YHTabBarController.m */; };
+		7EF218AA1E75936B00B32BB6 /* YHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218A91E75936B00B32BB6 /* YHHomeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7EF218861E7591D100B32BB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EF218641E7591D100B32BB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EF2186B1E7591D100B32BB6;
+			remoteInfo = "iPhone-DoubleTableView";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7EF2186C1E7591D100B32BB6 /* iPhone-DoubleTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iPhone-DoubleTableView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EF218701E7591D100B32BB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7EF218721E7591D100B32BB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7EF218731E7591D100B32BB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7EF2187B1E7591D100B32BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7EF2187E1E7591D100B32BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7EF218801E7591D100B32BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EF218851E7591D100B32BB6 /* iPhone-DoubleTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iPhone-DoubleTableViewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EF218891E7591D100B32BB6 /* iPhone_DoubleTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPhone_DoubleTableViewTests.m; sourceTree = "<group>"; };
+		7EF2188B1E7591D100B32BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EF2189E1E75932A00B32BB6 /* YHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHBaseViewController.h; sourceTree = "<group>"; };
+		7EF2189F1E75932A00B32BB6 /* YHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHBaseViewController.m; sourceTree = "<group>"; };
+		7EF218A01E75932A00B32BB6 /* YHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHNavigationController.h; sourceTree = "<group>"; };
+		7EF218A11E75932A00B32BB6 /* YHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHNavigationController.m; sourceTree = "<group>"; };
+		7EF218A21E75932A00B32BB6 /* YHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHTabBarController.h; sourceTree = "<group>"; };
+		7EF218A31E75932A00B32BB6 /* YHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHTabBarController.m; sourceTree = "<group>"; };
+		7EF218A81E75936B00B32BB6 /* YHHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHHomeViewController.h; sourceTree = "<group>"; };
+		7EF218A91E75936B00B32BB6 /* YHHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHHomeViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EF218691E7591D100B32BB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EF218821E7591D100B32BB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7EF218631E7591D100B32BB6 = {
+			isa = PBXGroup;
+			children = (
+				7EF2186E1E7591D100B32BB6 /* iPhone-DoubleTableView */,
+				7EF218881E7591D100B32BB6 /* iPhone-DoubleTableViewTests */,
+				7EF2186D1E7591D100B32BB6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7EF2186D1E7591D100B32BB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EF2186C1E7591D100B32BB6 /* iPhone-DoubleTableView.app */,
+				7EF218851E7591D100B32BB6 /* iPhone-DoubleTableViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EF2186E1E7591D100B32BB6 /* iPhone-DoubleTableView */ = {
+			isa = PBXGroup;
+			children = (
+				7EF218721E7591D100B32BB6 /* AppDelegate.h */,
+				7EF218731E7591D100B32BB6 /* AppDelegate.m */,
+				7EF2189D1E75932A00B32BB6 /* Main */,
+				7EF218A71E75935400B32BB6 /* Home */,
+				7EF2186F1E7591D100B32BB6 /* Supporting Files */,
+			);
+			path = "iPhone-DoubleTableView";
+			sourceTree = "<group>";
+		};
+		7EF2186F1E7591D100B32BB6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EF2187B1E7591D100B32BB6 /* Assets.xcassets */,
+				7EF2187D1E7591D100B32BB6 /* LaunchScreen.storyboard */,
+				7EF218801E7591D100B32BB6 /* Info.plist */,
+				7EF218701E7591D100B32BB6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EF218881E7591D100B32BB6 /* iPhone-DoubleTableViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				7EF218891E7591D100B32BB6 /* iPhone_DoubleTableViewTests.m */,
+				7EF2188B1E7591D100B32BB6 /* Info.plist */,
+			);
+			path = "iPhone-DoubleTableViewTests";
+			sourceTree = "<group>";
+		};
+		7EF2189D1E75932A00B32BB6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7EF218A21E75932A00B32BB6 /* YHTabBarController.h */,
+				7EF218A31E75932A00B32BB6 /* YHTabBarController.m */,
+				7EF218A01E75932A00B32BB6 /* YHNavigationController.h */,
+				7EF218A11E75932A00B32BB6 /* YHNavigationController.m */,
+				7EF2189E1E75932A00B32BB6 /* YHBaseViewController.h */,
+				7EF2189F1E75932A00B32BB6 /* YHBaseViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7EF218A71E75935400B32BB6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7EF218A81E75936B00B32BB6 /* YHHomeViewController.h */,
+				7EF218A91E75936B00B32BB6 /* YHHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7EF2186B1E7591D100B32BB6 /* iPhone-DoubleTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EF2188E1E7591D100B32BB6 /* Build configuration list for PBXNativeTarget "iPhone-DoubleTableView" */;
+			buildPhases = (
+				7EF218681E7591D100B32BB6 /* Sources */,
+				7EF218691E7591D100B32BB6 /* Frameworks */,
+				7EF2186A1E7591D100B32BB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iPhone-DoubleTableView";
+			productName = "iPhone-DoubleTableView";
+			productReference = 7EF2186C1E7591D100B32BB6 /* iPhone-DoubleTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7EF218841E7591D100B32BB6 /* iPhone-DoubleTableViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EF218911E7591D100B32BB6 /* Build configuration list for PBXNativeTarget "iPhone-DoubleTableViewTests" */;
+			buildPhases = (
+				7EF218811E7591D100B32BB6 /* Sources */,
+				7EF218821E7591D100B32BB6 /* Frameworks */,
+				7EF218831E7591D100B32BB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EF218871E7591D100B32BB6 /* PBXTargetDependency */,
+			);
+			name = "iPhone-DoubleTableViewTests";
+			productName = "iPhone-DoubleTableViewTests";
+			productReference = 7EF218851E7591D100B32BB6 /* iPhone-DoubleTableViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EF218641E7591D100B32BB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = junde;
+				TargetAttributes = {
+					7EF2186B1E7591D100B32BB6 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					7EF218841E7591D100B32BB6 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7EF2186B1E7591D100B32BB6;
+					};
+				};
+			};
+			buildConfigurationList = 7EF218671E7591D100B32BB6 /* Build configuration list for PBXProject "iPhone-DoubleTableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7EF218631E7591D100B32BB6;
+			productRefGroup = 7EF2186D1E7591D100B32BB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EF2186B1E7591D100B32BB6 /* iPhone-DoubleTableView */,
+				7EF218841E7591D100B32BB6 /* iPhone-DoubleTableViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7EF2186A1E7591D100B32BB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF2187F1E7591D100B32BB6 /* LaunchScreen.storyboard in Resources */,
+				7EF2187C1E7591D100B32BB6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EF218831E7591D100B32BB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EF218681E7591D100B32BB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF218A61E75932A00B32BB6 /* YHTabBarController.m in Sources */,
+				7EF218A51E75932A00B32BB6 /* YHNavigationController.m in Sources */,
+				7EF218AA1E75936B00B32BB6 /* YHHomeViewController.m in Sources */,
+				7EF218741E7591D100B32BB6 /* AppDelegate.m in Sources */,
+				7EF218A41E75932A00B32BB6 /* YHBaseViewController.m in Sources */,
+				7EF218711E7591D100B32BB6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EF218811E7591D100B32BB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF2188A1E7591D100B32BB6 /* iPhone_DoubleTableViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7EF218871E7591D100B32BB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EF2186B1E7591D100B32BB6 /* iPhone-DoubleTableView */;
+			targetProxy = 7EF218861E7591D100B32BB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7EF2187D1E7591D100B32BB6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EF2187E1E7591D100B32BB6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7EF2188C1E7591D100B32BB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7EF2188D1E7591D100B32BB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EF2188F1E7591D100B32BB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "iPhone-DoubleTableView/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.junde.iPhone-DoubleTableView";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7EF218901E7591D100B32BB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "iPhone-DoubleTableView/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.junde.iPhone-DoubleTableView";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7EF218921E7591D100B32BB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "iPhone-DoubleTableViewTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.junde.iPhone-DoubleTableViewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPhone-DoubleTableView.app/iPhone-DoubleTableView";
+			};
+			name = Debug;
+		};
+		7EF218931E7591D100B32BB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "iPhone-DoubleTableViewTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.junde.iPhone-DoubleTableViewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPhone-DoubleTableView.app/iPhone-DoubleTableView";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EF218671E7591D100B32BB6 /* Build configuration list for PBXProject "iPhone-DoubleTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF2188C1E7591D100B32BB6 /* Debug */,
+				7EF2188D1E7591D100B32BB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EF2188E1E7591D100B32BB6 /* Build configuration list for PBXNativeTarget "iPhone-DoubleTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF2188F1E7591D100B32BB6 /* Debug */,
+				7EF218901E7591D100B32BB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7EF218911E7591D100B32BB6 /* Build configuration list for PBXNativeTarget "iPhone-DoubleTableViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF218921E7591D100B32BB6 /* Debug */,
+				7EF218931E7591D100B32BB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7EF218641E7591D100B32BB6 /* Project object */;
+}
