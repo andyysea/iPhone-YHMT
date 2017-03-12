@@ -7,6 +7,7 @@
 //
 
 #import "YHHomeViewController.h"
+#import "YHHHViewController.h"
 
 @interface YHHomeViewController ()
 
@@ -16,10 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    [self.view addSubview:button];
+    button.center = self.view.center;
     
+    [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)buttonClick {
     
-    
+    YHHHViewController *vc = [YHHHViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

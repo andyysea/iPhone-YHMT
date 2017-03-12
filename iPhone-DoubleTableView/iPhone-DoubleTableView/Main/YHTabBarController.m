@@ -7,6 +7,8 @@
 //
 
 #import "YHTabBarController.h"
+#import "YHNavigationController.h"
+#import "YHHomeViewController.h"
 
 @interface YHTabBarController ()
 
@@ -16,22 +18,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self setupVC];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - 初始化控制器
+- (void)setupVC {
+    
+    YHHomeViewController *vc = [YHHomeViewController new];
+    YHNavigationController *nav = [[YHNavigationController alloc] initWithRootViewController:vc];
+    
+    self.viewControllers = @[nav];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

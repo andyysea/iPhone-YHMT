@@ -16,6 +16,7 @@
 		7EF218A51E75932A00B32BB6 /* YHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218A11E75932A00B32BB6 /* YHNavigationController.m */; };
 		7EF218A61E75932A00B32BB6 /* YHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218A31E75932A00B32BB6 /* YHTabBarController.m */; };
 		7EF218AA1E75936B00B32BB6 /* YHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218A91E75936B00B32BB6 /* YHHomeViewController.m */; };
+		7EF218AD1E75940800B32BB6 /* YHHHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218AC1E75940800B32BB6 /* YHHHViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		7EF218A31E75932A00B32BB6 /* YHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHTabBarController.m; sourceTree = "<group>"; };
 		7EF218A81E75936B00B32BB6 /* YHHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHHomeViewController.h; sourceTree = "<group>"; };
 		7EF218A91E75936B00B32BB6 /* YHHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHHomeViewController.m; sourceTree = "<group>"; };
+		7EF218AB1E75940800B32BB6 /* YHHHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHHHViewController.h; sourceTree = "<group>"; };
+		7EF218AC1E75940800B32BB6 /* YHHHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHHHViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 			children = (
 				7EF218A81E75936B00B32BB6 /* YHHomeViewController.h */,
 				7EF218A91E75936B00B32BB6 /* YHHomeViewController.m */,
+				7EF218AB1E75940800B32BB6 /* YHHHViewController.h */,
+				7EF218AC1E75940800B32BB6 /* YHHHViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 				7EF218A61E75932A00B32BB6 /* YHTabBarController.m in Sources */,
 				7EF218A51E75932A00B32BB6 /* YHNavigationController.m in Sources */,
 				7EF218AA1E75936B00B32BB6 /* YHHomeViewController.m in Sources */,
+				7EF218AD1E75940800B32BB6 /* YHHHViewController.m in Sources */,
 				7EF218741E7591D100B32BB6 /* AppDelegate.m in Sources */,
 				7EF218A41E75932A00B32BB6 /* YHBaseViewController.m in Sources */,
 				7EF218711E7591D100B32BB6 /* main.m in Sources */,
