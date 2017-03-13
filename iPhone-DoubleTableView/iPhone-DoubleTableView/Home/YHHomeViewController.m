@@ -7,9 +7,18 @@
 //
 
 #import "YHHomeViewController.h"
-#import "YHHHViewController.h"
+#import "YHCategoryContentView.h" // 左侧分类视图
+#import "YHProductContentView.h"  // 右侧对应的左侧分类产品视图
+#import "YHHomeModel.h"
 
 @interface YHHomeViewController ()
+/** 左侧分类视图 */
+@property (nonatomic, weak) YHCategoryContentView *categoryView;
+/** 左侧单个分类对应的产品详情视图 */
+@property (nonatomic, weak) YHProductContentView *productView;
+
+/** 数据源 */
+@property (nonatomic, strong) NSArray *modelArray;
 
 @end
 
@@ -17,19 +26,57 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeContactAdd];
-    [self.view addSubview:button];
-    button.center = self.view.center;
-    
-    [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+
+    [self initializeDataArray];
+    [self setupUI];
 }
 
-- (void)buttonClick {
+#pragma mark - 初始化数据源
+- (void)initializeDataArray {
     
-    YHHHViewController *vc = [YHHHViewController new];
-    [self.navigationController pushViewController:vc animated:YES];
+    NSArray *productArray = @[@"鞋子",@"衣服",@"化妆品",@"饮用水",@"副食品",@"小吃",@"鞋子",@"衣服",@"化妆品",@"饮用水"];
+    NSMutableArray *arrayM = [NSMutableArray array];
+    for (NSInteger i = 0; i < 20 ; i++) {
+        NSMutableDictionary *dictM = [NSMutableDictionary dictionary];
+        NSString *categoryStr = [NSString stringWithFormat:@"第 %zd 类", i];
+        [dictM setObject:categoryStr forKey:@"category"];
+        [dictM setObject:productArray forKey:@"products"];
+        
+        YHHomeModel *model = [YHHomeModel new];
+        [model setValuesForKeysWithDictionary:dictM];
+        
+        [arrayM addObject:model];
+    }
+    self.modelArray = arrayM.copy;
 }
+
+
+#pragma mark - 设置界面元素
+- (void)setupUI {
+    self.title = @"商家名称";
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    // 左侧分类视图
+    YHCategoryContentView *categoryView = [[YHCategoryContentView alloc] initWithFrame:CGRectMake(0, 0, 100, Height_Screen)];
+    categoryView.backgroundColor = [UIColor  lightGrayColor];
+    [self.view addSubview:categoryView];
+    
+    // 左侧分类对应的右侧视图
+    YHProductContentView *productView = [[YHProductContentView alloc] initWithFrame:CGRectMake(100, 0, Width_Screen - 100, Height_Screen)];
+    productView.backgroundColor = [UIColor darkGrayColor];
+    [self.view addSubview:productView];
+    
+    // 属性记录
+    _categoryView = categoryView;
+    _productView = productView;
+}
+
+
+
+#pragma mark - 更改状态栏前景颜色
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 
 @end

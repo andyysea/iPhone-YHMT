@@ -17,6 +17,10 @@
 		7EF218A61E75932A00B32BB6 /* YHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218A31E75932A00B32BB6 /* YHTabBarController.m */; };
 		7EF218AA1E75936B00B32BB6 /* YHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218A91E75936B00B32BB6 /* YHHomeViewController.m */; };
 		7EF218AD1E75940800B32BB6 /* YHHHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218AC1E75940800B32BB6 /* YHHHViewController.m */; };
+		7EF218B01E762BD100B32BB6 /* YHCategoryContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218AF1E762BD100B32BB6 /* YHCategoryContentView.m */; };
+		7EF218B31E762C1000B32BB6 /* YHProductContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218B21E762C1000B32BB6 /* YHProductContentView.m */; };
+		7EF218B81E7643E300B32BB6 /* dateType.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EF218B71E7643E300B32BB6 /* dateType.json */; };
+		7EF218BD1E76457200B32BB6 /* YHHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218BC1E76457200B32BB6 /* YHHomeModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +52,16 @@
 		7EF218A31E75932A00B32BB6 /* YHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHTabBarController.m; sourceTree = "<group>"; };
 		7EF218A81E75936B00B32BB6 /* YHHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHHomeViewController.h; sourceTree = "<group>"; };
 		7EF218A91E75936B00B32BB6 /* YHHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHHomeViewController.m; sourceTree = "<group>"; };
-		7EF218AB1E75940800B32BB6 /* YHHHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHHHViewController.h; sourceTree = "<group>"; };
-		7EF218AC1E75940800B32BB6 /* YHHHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHHHViewController.m; sourceTree = "<group>"; };
+		7EF218AB1E75940800B32BB6 /* YHHHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YHHHViewController.h; path = Home/YHHHViewController.h; sourceTree = "<group>"; };
+		7EF218AC1E75940800B32BB6 /* YHHHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YHHHViewController.m; path = Home/YHHHViewController.m; sourceTree = "<group>"; };
+		7EF218AE1E762BD100B32BB6 /* YHCategoryContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHCategoryContentView.h; sourceTree = "<group>"; };
+		7EF218AF1E762BD100B32BB6 /* YHCategoryContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCategoryContentView.m; sourceTree = "<group>"; };
+		7EF218B11E762C1000B32BB6 /* YHProductContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHProductContentView.h; sourceTree = "<group>"; };
+		7EF218B21E762C1000B32BB6 /* YHProductContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHProductContentView.m; sourceTree = "<group>"; };
+		7EF218B41E762DC700B32BB6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7EF218B71E7643E300B32BB6 /* dateType.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dateType.json; sourceTree = "<group>"; };
+		7EF218BB1E76457200B32BB6 /* YHHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHHomeModel.h; sourceTree = "<group>"; };
+		7EF218BC1E76457200B32BB6 /* YHHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHHomeModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +105,8 @@
 			children = (
 				7EF218721E7591D100B32BB6 /* AppDelegate.h */,
 				7EF218731E7591D100B32BB6 /* AppDelegate.m */,
+				7EF218AB1E75940800B32BB6 /* YHHHViewController.h */,
+				7EF218AC1E75940800B32BB6 /* YHHHViewController.m */,
 				7EF2189D1E75932A00B32BB6 /* Main */,
 				7EF218A71E75935400B32BB6 /* Home */,
 				7EF2186F1E7591D100B32BB6 /* Supporting Files */,
@@ -103,6 +117,7 @@
 		7EF2186F1E7591D100B32BB6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7EF218B41E762DC700B32BB6 /* PrefixHeader.pch */,
 				7EF2187B1E7591D100B32BB6 /* Assets.xcassets */,
 				7EF2187D1E7591D100B32BB6 /* LaunchScreen.storyboard */,
 				7EF218801E7591D100B32BB6 /* Info.plist */,
@@ -138,8 +153,13 @@
 			children = (
 				7EF218A81E75936B00B32BB6 /* YHHomeViewController.h */,
 				7EF218A91E75936B00B32BB6 /* YHHomeViewController.m */,
-				7EF218AB1E75940800B32BB6 /* YHHHViewController.h */,
-				7EF218AC1E75940800B32BB6 /* YHHHViewController.m */,
+				7EF218BB1E76457200B32BB6 /* YHHomeModel.h */,
+				7EF218BC1E76457200B32BB6 /* YHHomeModel.m */,
+				7EF218AE1E762BD100B32BB6 /* YHCategoryContentView.h */,
+				7EF218AF1E762BD100B32BB6 /* YHCategoryContentView.m */,
+				7EF218B11E762C1000B32BB6 /* YHProductContentView.h */,
+				7EF218B21E762C1000B32BB6 /* YHProductContentView.m */,
+				7EF218B71E7643E300B32BB6 /* dateType.json */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -226,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EF218B81E7643E300B32BB6 /* dateType.json in Resources */,
 				7EF2187F1E7591D100B32BB6 /* LaunchScreen.storyboard in Resources */,
 				7EF2187C1E7591D100B32BB6 /* Assets.xcassets in Resources */,
 			);
@@ -246,12 +267,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EF218A61E75932A00B32BB6 /* YHTabBarController.m in Sources */,
+				7EF218BD1E76457200B32BB6 /* YHHomeModel.m in Sources */,
 				7EF218A51E75932A00B32BB6 /* YHNavigationController.m in Sources */,
+				7EF218B31E762C1000B32BB6 /* YHProductContentView.m in Sources */,
 				7EF218AA1E75936B00B32BB6 /* YHHomeViewController.m in Sources */,
 				7EF218AD1E75940800B32BB6 /* YHHHViewController.m in Sources */,
 				7EF218741E7591D100B32BB6 /* AppDelegate.m in Sources */,
 				7EF218A41E75932A00B32BB6 /* YHBaseViewController.m in Sources */,
 				7EF218711E7591D100B32BB6 /* main.m in Sources */,
+				7EF218B01E762BD100B32BB6 /* YHCategoryContentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "iPhone-DoubleTableView/PrefixHeader.pch";
 				INFOPLIST_FILE = "iPhone-DoubleTableView/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -389,6 +414,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "iPhone-DoubleTableView/PrefixHeader.pch";
 				INFOPLIST_FILE = "iPhone-DoubleTableView/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

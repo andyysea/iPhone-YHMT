@@ -1,0 +1,30 @@
+//
+//  PrefixHeader.pch
+//  iPhone-DoubleTableView
+//
+//  Created by junde on 2017/3/13.
+//  Copyright © 2017年 junde. All rights reserved.
+//
+
+
+#ifdef __OBJC__
+
+// 输出宏定义
+#ifdef DEBUG
+#define NSLog(fmt, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define NSLog(...)
+#endif
+
+// 其他宏定义
+#define Width_Screen [UIScreen mainScreen].bounds.size.width
+#define Height_Screen [UIScreen mainScreen].bounds.size.height
+
+
+// 第三方类库
+
+
+// 其他公共类
+
+
+#endif
