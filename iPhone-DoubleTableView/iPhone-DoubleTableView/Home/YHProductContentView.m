@@ -59,17 +59,21 @@ static NSString *headId = @"headId";
     self.IsScrollUp = (self.previousOffsetY < offsetY) ? YES : NO;
     self.previousOffsetY = offsetY;
     
-    NSLog(@"--> %zd",self.IsScrollUp);
+//    NSLog(@"--> %zd",self.IsScrollUp);
 }
 
 /** 结束减速 --> 包含拖拽松手的时候速度本身为0 和 拖拽松手的时候速度不为0的时候慢慢减速为0 */
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+    NSLog("111-->%zd-%zd-%zd",self.productTableView.isDecelerating,self.productTableView.isDragging,self.productTableView.isTracking);
+    
     
 }
 
 /** 停止拖拽,将要减速 */
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     
+    NSLog("222-->%zd-%zd-%zd",self.productTableView.isDecelerating,self.productTableView.isDragging,self.productTableView.isTracking);
 }
 
 #pragma mark - UITableViewDelegate
@@ -91,7 +95,7 @@ static NSString *headId = @"headId";
         return;
     }
     
-    if (!self.IsScrollUp && self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(productView:willDisplayHeaderViewInSection:)]) {
+    if (!self.IsScrollUp && self.productTableView.isDecelerating && self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(productView:willDisplayHeaderViewInSection:)]) {
         [self.yhdelegate productView:self willDisplayHeaderViewInSection:section];
     }
 }
@@ -99,7 +103,7 @@ static NSString *headId = @"headId";
 /** 结束显示组头 --> 这个对应的是向上滚动 */
 - (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section {
     
-    if (self.IsScrollUp && self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(productView:didEndDisplayHeaderViewInSection:)]) {
+    if (self.IsScrollUp && self.productTableView.isDecelerating && self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(productView:didEndDisplayHeaderViewInSection:)]) {
         [self.yhdelegate productView:self didEndDisplayHeaderViewInSection:section];
     }
 }
