@@ -10,4 +10,7 @@
 
 @interface YHProductContentView : UIView
 
+/** 模型数组 */
+@property (nonatomic, strong) NSArray *productModelArray;
+
 @end

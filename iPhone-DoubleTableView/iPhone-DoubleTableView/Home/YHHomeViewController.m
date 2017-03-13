@@ -11,7 +11,7 @@
 #import "YHProductContentView.h"  // 右侧对应的左侧分类产品视图
 #import "YHHomeModel.h"
 
-@interface YHHomeViewController ()
+@interface YHHomeViewController ()<YHCategoryContentViewDelegate>
 /** 左侧分类视图 */
 @property (nonatomic, weak) YHCategoryContentView *categoryView;
 /** 左侧单个分类对应的产品详情视图 */
@@ -27,8 +27,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self initializeDataArray];
     [self setupUI];
+    [self initializeDataArray];
+}
+
+
+#pragma mark - YHCategoryContentViewDelegate
+- (void)categoryContentView:(YHCategoryContentView *)categoryView didSelectIndexOfCategoryView:(NSInteger)index {
+    NSLog(@"选中的分类对应模型数组中的下标为 %zd", index);
 }
 
 #pragma mark - 初始化数据源
@@ -48,6 +54,10 @@
         [arrayM addObject:model];
     }
     self.modelArray = arrayM.copy;
+    
+    // 传递数据
+    self.categoryView.categoryModelArray = self.modelArray;
+    self.productView.productModelArray = self.modelArray;
 }
 
 
@@ -57,12 +67,14 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     // 左侧分类视图
-    YHCategoryContentView *categoryView = [[YHCategoryContentView alloc] initWithFrame:CGRectMake(0, 0, 100, Height_Screen)];
+    YHCategoryContentView *categoryView = [[YHCategoryContentView alloc] initWithFrame:CGRectMake(0, 64, 100, Height_Screen)];
     categoryView.backgroundColor = [UIColor  lightGrayColor];
     [self.view addSubview:categoryView];
     
+    categoryView.yhdelegate = self;
+    
     // 左侧分类对应的右侧视图
-    YHProductContentView *productView = [[YHProductContentView alloc] initWithFrame:CGRectMake(100, 0, Width_Screen - 100, Height_Screen)];
+    YHProductContentView *productView = [[YHProductContentView alloc] initWithFrame:CGRectMake(100, 64, Width_Screen - 100, Height_Screen)];
     productView.backgroundColor = [UIColor darkGrayColor];
     [self.view addSubview:productView];
     
