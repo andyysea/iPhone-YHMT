@@ -11,7 +11,7 @@
 
 @protocol YHCategoryContentViewDelegate <NSObject>
 /** 分类视图的代理方法,返回选中的哪个分类对应的模型数组中的下标 */
-- (void)categoryContentView:(YHCategoryContentView *)categoryView didSelectIndexOfCategoryView:(NSInteger)index;
+- (void)categoryContentView:(YHCategoryContentView *)categoryView didSelectIndexOfCategoryView:(NSInteger)selectCategoryIndex;
 
 @end
 
@@ -22,6 +22,9 @@
 @property (nonatomic, strong) NSArray *categoryModelArray;
 
 /** 代理属性 */
-@property (nonatomic, weak) id yhdelegate;
+@property (nonatomic, weak) id <YHCategoryContentViewDelegate>yhdelegate;
+
+/** 滚动的时候右侧商品视图顶部显示的组头 */
+@property (nonatomic, assign) NSInteger scrollDisplayTopHeaderSection;
 
 @end

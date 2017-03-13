@@ -30,24 +30,31 @@ static NSString *categoryCellId = @"categoryCellId";
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     // 这里将选中的分类对应的 indexPath 中对应数组的下标传递给控制器
     if (self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(categoryContentView:didSelectIndexOfCategoryView:)]) {
         [self.yhdelegate categoryContentView:self didSelectIndexOfCategoryView:indexPath.row];
     }
-    
     // 将选中的 row 滚动到表格视图的中间, 两种方法,任选其一
 //    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
     [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
-    
 }
 
-#pragma mark - 重写模型数组的set方法,传递数据
+#pragma mark - 重写属性的set方法,传递数据
+/** 模型属性的setter方法 */
 - (void)setCategoryModelArray:(NSArray *)categoryModelArray {
     _categoryModelArray = categoryModelArray;
     
     [self.categoryTableView reloadData];
 }
+
+/** 右侧滚动的时候,此时悬挂在视图顶部的组头 */
+- (void)setScrollDisplayTopHeaderSection:(NSInteger)scrollDisplayTopHeaderSection {
+    _scrollDisplayTopHeaderSection = scrollDisplayTopHeaderSection;
+    NSLog(@"--> %zd", scrollDisplayTopHeaderSection);
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:scrollDisplayTopHeaderSection inSection:0];
+    [self.categoryTableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+}
+
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -73,8 +80,7 @@ static NSString *categoryCellId = @"categoryCellId";
     tableView.dataSource = self;
     tableView.delegate = self;
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:categoryCellId];
-    
-    
+
     _categoryTableView = tableView;
 }
 

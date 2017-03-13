@@ -9,7 +9,7 @@
 #import "YHTabBarController.h"
 #import "YHNavigationController.h"
 #import "YHHomeViewController.h"
-
+#import "YHHHViewController.h"
 @interface YHTabBarController ()
 
 @end
@@ -26,7 +26,7 @@
 #pragma mark - 初始化控制器
 - (void)setupVC {
     
-    YHHomeViewController *vc = [YHHomeViewController new];
+    YHHHViewController *vc = [YHHHViewController new];
     YHNavigationController *nav = [[YHNavigationController alloc] initWithRootViewController:vc];
     
     self.viewControllers = @[nav];

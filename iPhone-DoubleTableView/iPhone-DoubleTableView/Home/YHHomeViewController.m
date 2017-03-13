@@ -11,7 +11,7 @@
 #import "YHProductContentView.h"  // 右侧对应的左侧分类产品视图
 #import "YHHomeModel.h"
 
-@interface YHHomeViewController ()<YHCategoryContentViewDelegate>
+@interface YHHomeViewController ()<YHCategoryContentViewDelegate, YHProductContentViewDelegate>
 /** 左侧分类视图 */
 @property (nonatomic, weak) YHCategoryContentView *categoryView;
 /** 左侧单个分类对应的产品详情视图 */
@@ -32,9 +32,21 @@
 }
 
 
+#pragma mark - YHProductContentViewDelegate
+- (void)productView:(YHProductContentView *)productView willDisplayHeaderViewInSection:(NSInteger)section {
+    self.categoryView.scrollDisplayTopHeaderSection = section;
+}
+
+- (void)productView:(YHProductContentView *)productView didEndDisplayHeaderViewInSection:(NSInteger)section {
+    
+    self.categoryView.scrollDisplayTopHeaderSection = section + 1;
+}
+
 #pragma mark - YHCategoryContentViewDelegate
-- (void)categoryContentView:(YHCategoryContentView *)categoryView didSelectIndexOfCategoryView:(NSInteger)index {
-    NSLog(@"选中的分类对应模型数组中的下标为 %zd", index);
+- (void)categoryContentView:(YHCategoryContentView *)categoryView didSelectIndexOfCategoryView:(NSInteger)selectCategoryIndex {
+    
+    // 将点击选中的左侧分类对应的数组下标传递给右侧分类商品视图
+    self.productView.selectCategoryIndex = selectCategoryIndex;
 }
 
 #pragma mark - 初始化数据源
@@ -66,17 +78,19 @@
     self.title = @"商家名称";
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    // 左侧分类视图
-    YHCategoryContentView *categoryView = [[YHCategoryContentView alloc] initWithFrame:CGRectMake(0, 64, 100, Height_Screen)];
+    // 1> 左侧分类视图
+    YHCategoryContentView *categoryView = [[YHCategoryContentView alloc] initWithFrame:CGRectMake(0, 64, 100, Height_Screen - 64)];
     categoryView.backgroundColor = [UIColor  lightGrayColor];
     [self.view addSubview:categoryView];
     
     categoryView.yhdelegate = self;
     
-    // 左侧分类对应的右侧视图
-    YHProductContentView *productView = [[YHProductContentView alloc] initWithFrame:CGRectMake(100, 64, Width_Screen - 100, Height_Screen)];
+    // 2> 左侧分类对应的右侧视图
+    YHProductContentView *productView = [[YHProductContentView alloc] initWithFrame:CGRectMake(100, 64, Width_Screen - 100, Height_Screen - 64)];
     productView.backgroundColor = [UIColor darkGrayColor];
     [self.view addSubview:productView];
+    
+    productView.yhdelegate = self;
     
     // 属性记录
     _categoryView = categoryView;
