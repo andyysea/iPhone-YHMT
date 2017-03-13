@@ -63,17 +63,25 @@ static NSString *headId = @"headId";
 }
 
 /** 结束减速 --> 包含拖拽松手的时候速度本身为0 和 拖拽松手的时候速度不为0的时候慢慢减速为0 */
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    
-    NSLog("111-->%zd-%zd-%zd",self.productTableView.isDecelerating,self.productTableView.isDragging,self.productTableView.isTracking);
-    
-    
-}
+//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+//    
+//    NSLog("111-->%zd-%zd-%zd",self.productTableView.isDecelerating,self.productTableView.isDragging,self.productTableView.isTracking);
+//    
+//    
+//}
 
-/** 停止拖拽,将要减速 */
+/** 停止拖拽,将要减速,  */
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     
-    NSLog("222-->%zd-%zd-%zd",self.productTableView.isDecelerating,self.productTableView.isDragging,self.productTableView.isTracking);
+    //**** 这个判断,是判断松手的时候,滚动速度为 0 的情况进入判断 ****
+    if (!self.productTableView.isDecelerating && !decelerate) {
+        NSLog("222-->%zd-%zd",decelerate,self.productTableView.isDecelerating);
+        NSArray *indexPaths = [self.productTableView indexPathsForVisibleRows];
+        if (self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(productView:willDisplayHeaderViewInSection:)]) {
+            NSIndexPath *indexPath = indexPaths[0]; // 取出可见组头的第一个即是最上面一个
+            [self.yhdelegate productView:self willDisplayHeaderViewInSection:indexPath.section];
+        }
+    }
 }
 
 #pragma mark - UITableViewDelegate
