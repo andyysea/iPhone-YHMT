@@ -13,7 +13,8 @@
     -- 解决办法:在组头出现和消失的方法里,加上判断条件是否减速,因为只有拖拽停止的时候才有减速,点击左侧的时候,右侧会加速然后减速,所以系统给是否减速的那个属性赋的值是 NO,,所以点击左侧,右侧滚动的时候不会进入判断条件调用我们的代理方法,,这样也产生了一个问题,这就是难点二
 -- 二,问题一解决之后,那么会产生一个新问题,那就是滚动右侧的时候如果是没有松手慢慢滚,或者停止滚动滚动视图速度为 0 的时候,如果顶部组头发生变化,左侧没有相应的变化
     -- 产生原因:是因为在组头出现或者消失的时候要调用代理方法,但是加上是否减速的判断条件之后,如果停止时速度为0 就进入不了判断条件调用代理方法
-    -- 解决办法:实现下面的代理方法即可,松手时如果速度为0,松手时就会变化
+    -- 解决办法一:实现下面的代理方法即可,
+                但是如果滚动速度较慢松手时如果速度为0,松手时左侧分类才会变化.
 
 /** 停止拖拽,将要减速,或者此时速度为0,都会调用  */
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
@@ -28,3 +29,19 @@
         }
     }
 }
+
+    -- 解决办法二: 推荐这个方法,在顶部组头将要出现和消失的方法内分别实现下面判断即可,
+                这种解决办法在滚动的时候,如果右侧组头发生变化,左侧分类就会跟着变化,更接近美团外卖商家效果
+
+/** 顶部组头将要出现的方法内实现的判断 */
+// 这个是判断拖拽的时候,如果表头出现,但是没有松手,让左侧分类跟着变化
+if (!self.IsScrollUp && self.productTableView.isDragging && self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(productView:willDisplayHeaderViewInSection:)]) {
+    [self.yhdelegate productView:self willDisplayHeaderViewInSection:section];
+}
+
+/** 顶部组头已经消失的方法内实现的判断 */
+// 这个是判断拖拽的时候,如果组头消失,但是没有松手,让左侧分类跟着变化
+if (self.IsScrollUp && self.productTableView.isDragging && self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(productView:didEndDisplayHeaderViewInSection:)]) {
+    [self.yhdelegate productView:self didEndDisplayHeaderViewInSection:section];
+}
+

@@ -71,18 +71,18 @@ static NSString *headId = @"headId";
 //}
 
 /** 停止拖拽,将要减速,或者此时速度为0,都会调用  */
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    
-    NSLog("222-->%zd-%zd",decelerate,self.productTableView.isDecelerating);
-    //**** 这个判断,是判断松手的时候,滚动速度为 0 的情况进入判断 ****
-    if (!self.productTableView.isDecelerating && !decelerate) {
-        NSArray *indexPaths = [self.productTableView indexPathsForVisibleRows];
-        if (self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(productView:willDisplayHeaderViewInSection:)]) {
-            NSIndexPath *indexPath = indexPaths[0]; // 取出可见组头的第一个即是最上面一个
-            [self.yhdelegate productView:self willDisplayHeaderViewInSection:indexPath.section];
-        }
-    }
-}
+//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+//    
+//    NSLog("222-->%zd-%zd",decelerate,self.productTableView.isDecelerating);
+//    //**** 这个判断,是判断松手的时候,滚动速度为 0 的情况进入判断 ****
+//    if (!self.productTableView.isDecelerating && !decelerate) {
+//        NSArray *indexPaths = [self.productTableView indexPathsForVisibleRows];
+//        if (self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(productView:willDisplayHeaderViewInSection:)]) {
+//            NSIndexPath *indexPath = indexPaths[0]; // 取出可见组头的第一个即是最上面一个
+//            [self.yhdelegate productView:self willDisplayHeaderViewInSection:indexPath.section];
+//        }
+//    }
+//}
 
 #pragma mark - UITableViewDelegate
 /** 自定义组头视图 */
@@ -106,14 +106,25 @@ static NSString *headId = @"headId";
     if (!self.IsScrollUp && self.productTableView.isDecelerating && self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(productView:willDisplayHeaderViewInSection:)]) {
         [self.yhdelegate productView:self willDisplayHeaderViewInSection:section];
     }
+    
+    // *** 这个是判断拖拽的时候,如果表头出现,但是没有松手,让左侧分类跟着变化
+    if (!self.IsScrollUp && self.productTableView.isDragging && self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(productView:willDisplayHeaderViewInSection:)]) {
+        [self.yhdelegate productView:self willDisplayHeaderViewInSection:section];
+    }
 }
 
 /** 结束显示组头 --> 这个对应的是向上滚动 */
 - (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section {
-    NSLog(@"did------> %zd",self.productTableView.isDecelerating);
+    
     if (self.IsScrollUp && self.productTableView.isDecelerating && self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(productView:didEndDisplayHeaderViewInSection:)]) {
         [self.yhdelegate productView:self didEndDisplayHeaderViewInSection:section];
     }
+    
+    // ***这个是判断拖拽的时候,如果组头消失,但是没有松手,让左侧分类跟着变化
+    if (self.IsScrollUp && self.productTableView.isDragging && self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(productView:didEndDisplayHeaderViewInSection:)]) {
+        [self.yhdelegate productView:self didEndDisplayHeaderViewInSection:section];
+    }
+
 }
 
 /** 选中的cell */
