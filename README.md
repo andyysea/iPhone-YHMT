@@ -1,4 +1,4 @@
-# iPhone-YHMT
+#iPhone-YHMT
 <br>
 先仿一仿美团外卖的双表格联动
 ------------------------
@@ -7,7 +7,7 @@
 
 |显示效果|
 --------
-<img src="https://github.com/andyysea/iPhone-DoubleTableView/blob/master/GIF/DynamicGraph.gif" width=200 height=360 />
+<img src="https://github.com/andyysea/iPhone-YHMT/blob/master/GIF/DynamicGraph.gif" width=200 height=360 />
 
 
 <br/>
