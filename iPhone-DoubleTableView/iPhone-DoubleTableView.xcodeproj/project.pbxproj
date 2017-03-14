@@ -19,8 +19,8 @@
 		7EF218AD1E75940800B32BB6 /* YHHHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218AC1E75940800B32BB6 /* YHHHViewController.m */; };
 		7EF218B01E762BD100B32BB6 /* YHCategoryContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218AF1E762BD100B32BB6 /* YHCategoryContentView.m */; };
 		7EF218B31E762C1000B32BB6 /* YHProductContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218B21E762C1000B32BB6 /* YHProductContentView.m */; };
-		7EF218B81E7643E300B32BB6 /* dateType.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EF218B71E7643E300B32BB6 /* dateType.json */; };
 		7EF218BD1E76457200B32BB6 /* YHHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF218BC1E76457200B32BB6 /* YHHomeModel.m */; };
+		7EF218C11E777F0100B32BB6 /* 文件说明 in Resources */ = {isa = PBXBuildFile; fileRef = 7EF218C01E777F0100B32BB6 /* 文件说明 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,9 +59,9 @@
 		7EF218B11E762C1000B32BB6 /* YHProductContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHProductContentView.h; sourceTree = "<group>"; };
 		7EF218B21E762C1000B32BB6 /* YHProductContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHProductContentView.m; sourceTree = "<group>"; };
 		7EF218B41E762DC700B32BB6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		7EF218B71E7643E300B32BB6 /* dateType.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dateType.json; sourceTree = "<group>"; };
 		7EF218BB1E76457200B32BB6 /* YHHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHHomeModel.h; sourceTree = "<group>"; };
 		7EF218BC1E76457200B32BB6 /* YHHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHHomeModel.m; sourceTree = "<group>"; };
+		7EF218C01E777F0100B32BB6 /* 文件说明 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "文件说明"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +103,7 @@
 		7EF2186E1E7591D100B32BB6 /* iPhone-DoubleTableView */ = {
 			isa = PBXGroup;
 			children = (
+				7EF218C01E777F0100B32BB6 /* 文件说明 */,
 				7EF218721E7591D100B32BB6 /* AppDelegate.h */,
 				7EF218731E7591D100B32BB6 /* AppDelegate.m */,
 				7EF218AB1E75940800B32BB6 /* YHHHViewController.h */,
@@ -159,7 +160,6 @@
 				7EF218AF1E762BD100B32BB6 /* YHCategoryContentView.m */,
 				7EF218B11E762C1000B32BB6 /* YHProductContentView.h */,
 				7EF218B21E762C1000B32BB6 /* YHProductContentView.m */,
-				7EF218B71E7643E300B32BB6 /* dateType.json */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -246,9 +246,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EF218B81E7643E300B32BB6 /* dateType.json in Resources */,
 				7EF2187F1E7591D100B32BB6 /* LaunchScreen.storyboard in Resources */,
 				7EF2187C1E7591D100B32BB6 /* Assets.xcassets in Resources */,
+				7EF218C11E777F0100B32BB6 /* 文件说明 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +466,7 @@
 				7EF218901E7591D100B32BB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EF218911E7591D100B32BB6 /* Build configuration list for PBXNativeTarget "iPhone-DoubleTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +475,7 @@
 				7EF218931E7591D100B32BB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -70,12 +70,12 @@ static NSString *headId = @"headId";
 //    
 //}
 
-/** 停止拖拽,将要减速,  */
+/** 停止拖拽,将要减速,或者此时速度为0,都会调用  */
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     
+    NSLog("222-->%zd-%zd",decelerate,self.productTableView.isDecelerating);
     //**** 这个判断,是判断松手的时候,滚动速度为 0 的情况进入判断 ****
     if (!self.productTableView.isDecelerating && !decelerate) {
-        NSLog("222-->%zd-%zd",decelerate,self.productTableView.isDecelerating);
         NSArray *indexPaths = [self.productTableView indexPathsForVisibleRows];
         if (self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(productView:willDisplayHeaderViewInSection:)]) {
             NSIndexPath *indexPath = indexPaths[0]; // 取出可见组头的第一个即是最上面一个
@@ -96,7 +96,7 @@ static NSString *headId = @"headId";
 
 /** 将要显示组头 --> 这个对应的是向下滚动 */
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
-    
+    NSLog(@"will------> %zd",self.productTableView.isDecelerating);
     // 这个 if 用于初始化的时候,左侧能够选中第一行分类
     if (self.IsFirstInitialize && self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(productView:willDisplayHeaderViewInSection:)] ) {
         [self.yhdelegate productView:self willDisplayHeaderViewInSection:0];
@@ -110,7 +110,7 @@ static NSString *headId = @"headId";
 
 /** 结束显示组头 --> 这个对应的是向上滚动 */
 - (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section {
-    
+    NSLog(@"did------> %zd",self.productTableView.isDecelerating);
     if (self.IsScrollUp && self.productTableView.isDecelerating && self.yhdelegate && [self.yhdelegate respondsToSelector:@selector(productView:didEndDisplayHeaderViewInSection:)]) {
         [self.yhdelegate productView:self didEndDisplayHeaderViewInSection:section];
     }
